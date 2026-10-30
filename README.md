@@ -1,9 +1,16 @@
 # ReconEveryThings (recn)
-
+## A Reconnaissance Tool + Agent MCP/Skills for a comprehensive reconnaissance.
+```
+   ___                    ____                  __  __   _            
+  / _ \___ _______  ___  / __/  _____ ______ __/ /_/ /  (_)__  ___ ____
+ / , _/ -_) __/ _ \/ _ \/ _/| |/ / -_) __/ // / __/ _ \/ / _ \/ _ `(_-<
+/_/|_|\__/\__/\___/_//_/___/|___/\__/_/  \_, /\__/_//_/_/_//_/\_, /___/
+                                       /___/       @llh0408 /___/
+```
 ReconEveryThings is a reconnaissance framework with two integrated parts:
 
-1. A Python CLI named `recn` for chained infrastructure and OSINT workflows.
-2. A FastMCP server that exposes the same engine as agent tools, adds an
+1. Python CLI named `recn` for chained infrastructure and OSINT workflows.
+2. FastMCP server that exposes the same engine as agent tools, adds an
    entity relationship graph, and generates assessment reports.
 
 The tool performs reconnaissance, metadata extraction, and passive CVE mapping
