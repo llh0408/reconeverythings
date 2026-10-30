@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reconeverythings"
+version = "1.0.0"
+description = "Modular reconnaissance CLI and MCP server for infrastructure and OSINT investigations."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "llh0408" }]
+keywords = ["reconnaissance", "osint", "red-team", "mcp", "security"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Security",
+]
+dependencies = [
+  "httpx>=0.27.0",
+  "pydantic>=2.6.0",
+  "dnspython>=2.4.0",
+]
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.2.0,<2"]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.23", "mcp>=1.2.0,<2"]
+
+[project.scripts]
+recn = "rec_cli.main:main"
+rec-mcp = "mcp_server.server:main"
+
+[tool.setuptools.packages.find]
+include = ["rec_cli*", "mcp_server*"]
+
+[tool.setuptools.package-data]
+rec_cli = ["data/*.txt"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

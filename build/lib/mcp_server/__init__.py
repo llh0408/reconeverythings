@@ -1,0 +1,1 @@
+"""ReconEveryThings MCP server package."""
